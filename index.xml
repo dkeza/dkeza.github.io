@@ -6,21 +6,18 @@
     <description>Recent content on Darko Kezic&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Apr 2019 10:21:19 +0200</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2019 10:21:19 +0200</lastBuildDate>
     
 	<atom:link href="https://www.kezic.net/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>My First Post</title>
-      <link>https://www.kezic.net/posts/my-first-post/</link>
-      <pubDate>Sat, 13 Apr 2019 10:21:19 +0200</pubDate>
+      <title>How to send E-Mail from Go</title>
+      <link>https://www.kezic.net/posts/send-email-from-go/</link>
+      <pubDate>Sun, 21 Apr 2019 10:21:19 +0200</pubDate>
       
-      <guid>https://www.kezic.net/posts/my-first-post/</guid>
-      <description>This is my first post.
-Add another line.
-Section one Lorem ipsum dolor sit amet, quodsi consequuntur ad ius, exerci dolores cum ei. Cum democritum interesset et, nam an nihil essent. Ea lucilius consetetur mei, ut cum intellegat adolescens. Tation debitis at quo, cu nec erat fugit facilis. Eu omnis delectus tacimates duo, eu duo persius nostrum conceptam.
-Suas dicit pertinacia sit ea, debitis aliquando consequuntur ut vel, homero iuvaret mei cu.</description>
+      <guid>https://www.kezic.net/posts/send-email-from-go/</guid>
+      <description>&lt;p&gt;I wanted to create small service in Go, which should asynchronously send E-Mails created on web site.&lt;/p&gt;</description>
     </item>
     
   </channel>
