@@ -6,11 +6,7 @@
     <description>Recent content on Darko Kezic&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Nov 2019 18:59:23 +0100</lastBuildDate>
-    
-	<atom:link href="https://www.kezic.net/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 24 Nov 2019 19:31:19 +0200</lastBuildDate><atom:link href="https://www.kezic.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Projects</title>
       <link>https://www.kezic.net/projects/</link>
@@ -31,8 +27,8 @@ In goexpenses.ini file is possible also to set other parameters, like mail serve
       <pubDate>Sun, 24 Nov 2019 19:31:19 +0200</pubDate>
       
       <guid>https://www.kezic.net/posts/raspberry_pi_sd_card_image_issue/</guid>
-      <description>&lt;p&gt;For my Raspberry Pi I have many times done backup from SD card to image file.&lt;br /&gt;
-But first time when I wanted to actually restore my saved image backup from file on disk to SC card for Raspberry Pi, I expirienced unpleasent suprise:&lt;br /&gt;
+      <description>&lt;p&gt;For my Raspberry Pi I have many times done backup from SD card to image file.&lt;br&gt;
+But first time when I wanted to actually restore my saved image backup from file on disk to SC card for Raspberry Pi, I expirienced unpleasent suprise:&lt;br&gt;
 I couldn&amp;rsquo;t restore my backup.&lt;/p&gt;</description>
     </item>
     
@@ -66,7 +62,8 @@ Experience
       
       <guid>https://www.kezic.net/posts/angularjs-minify-cache-busting/</guid>
       <description>Single page aplication When dealing with Single page application (SPA), it is nessesary to think about minifying those js and css files, and combining those in single files, to speed up loading of app.
-Also there is another issue with caching. When You release new version, browser won&amp;rsquo;t load new files, until You go into developer tools, and disable caching. But this is not a solution for production app.</description>
+Also there is another issue with caching. When You release new version, browser won&amp;rsquo;t load new files, until You go into developer tools, and disable caching. But this is not a solution for production app.
+Here comes in play &amp;ldquo;Cache Busting&amp;rdquo;.</description>
     </item>
     
     <item>

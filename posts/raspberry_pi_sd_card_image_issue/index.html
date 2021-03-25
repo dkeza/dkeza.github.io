@@ -4,7 +4,7 @@
   <link href="//gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.78.2" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
 
   
   <link href="" rel="alternate" type="application/rss+xml" title="Darko Kezic&#39;s Blog" />
-
+  
   
 </head>
 
@@ -41,7 +41,7 @@
     <div class="sidebar-about">
       <a href="https://www.kezic.net/"><h1>Darko Kezic&#39;s Blog</h1></a>
       
-        <p class="lead">Software engineer, coder, entrepreneur, passionate about new technologies in IT industry</p>
+        <p class="lead">Software engineer, coder, entrepreneur, hiker</p>
       
     </div>
     <a class="sidebar-nav" href="https://www.kezic.net/">Home</a><br/>
@@ -79,7 +79,7 @@
 
     <div class="sidebar-footer">
       <p>Powered by <a href="http://gohugo.io/">Hugo</a> - 
-      &copy; 2019 Darko Kezic. All rights reserved.</p>
+      &copy; 2021 Darko Kezic. All rights reserved.</p>
     </div>
   </div>
 </div>
@@ -87,29 +87,20 @@
     <div class="post">
     <h1>Raspberry Pi SD card image backup issue</h1>
     <time datetime=2019-11-24T19:31:19&#43;0200 class="post-date">Sun, Nov 24, 2019</time>
-    <p>For my Raspberry Pi I have many times done backup from SD card to image file.<br />
-But first time when I wanted to actually restore my saved image backup from file on disk to SC card for Raspberry Pi, I expirienced unpleasent suprise:<br />
+    <p>For my Raspberry Pi I have many times done backup from SD card to image file.<br>
+But first time when I wanted to actually restore my saved image backup from file on disk to SC card for Raspberry Pi, I expirienced unpleasent suprise:<br>
 I couldn&rsquo;t restore my backup.</p>
-
 <p>I created backup from 16GB SD card with <a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>. Later I used <a href="https://www.balena.io/etcher/">Etcher</a> to restore image to another 16GB SD card. But then Etcher complained that SD card is smaller for 47 MB that image file?!</p>
-
 <p>After some googling I realized that every SD card has slightly different size because of errors in production.</p>
-
 <p>Solution was to resize Linux partition on SD card with Live CD Linux distribution <a href="https://sourceforge.net/projects/redobackup/">Redo Backup and Recovery</a>. When you boot from USB, exit from started rescue window, and from menu start <a href="https://gparted.org/">GParted</a> application. You can also use <a href="https://gparted.org/livecd.php">GParted Live CD</a> to boot from USB and use this program.</p>
-
 <p>Before booting from live USB, put also Raspberry Pi SD card into PC.</p>
-
 <p>I decreased size for 100 MB. Be careful, not to resize partition to part of disk where data is actually written.</p>
-
-<p>Then I used <a href="https://www.alexpage.de/usb-image-tool/">USB Image Tool</a> to write image file to SD card.<br />
-Here is important in Options tab to turn on check box <em>Truncate oversize images in device mode</em>.<br />
-Now I clicked on <em>Restore</em> button, and my image file was successfully written to SD card.<br />
+<p>Then I used <a href="https://www.alexpage.de/usb-image-tool/">USB Image Tool</a> to write image file to SD card.<br>
+Here is important in Options tab to turn on check box <em>Truncate oversize images in device mode</em>.<br>
+Now I clicked on <em>Restore</em> button, and my image file was successfully written to SD card.<br>
 This worked because USB Image Tool doesn&rsquo;t check for SD card size before starting to write image file.</p>
-
 <p>Now I am always using USB Image tool, for creating and restoring images. Before I create image file, I always first reduce size of image for 100 MB (or more).</p>
-
 <p>With this method is also possible to write image file to larger and smaller SD cards, or to reduce image size to 4GB, or less, that is, to also reduce backup file size.</p>
-
 <p>Nowadays is hard to find 4GB and 8GB SD cards, and for smaller Raspberry Pi projects 16GB, 32GB and 64GB SD cards are overkill, but this way we can make smaller backups.</p>
   </div>
 

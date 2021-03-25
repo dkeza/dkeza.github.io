@@ -4,7 +4,7 @@
   <link href="//gmpg.org/xfn/11" rel="profile">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-  <meta name="generator" content="Hugo 0.59.1" />
+  <meta name="generator" content="Hugo 0.78.2" />
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
 
   
   <link href="" rel="alternate" type="application/rss+xml" title="Darko Kezic&#39;s Blog" />
-
+  
   
 </head>
 
@@ -41,7 +41,7 @@
     <div class="sidebar-about">
       <a href="https://www.kezic.net/"><h1>Darko Kezic&#39;s Blog</h1></a>
       
-        <p class="lead">Software engineer, coder, entrepreneur, passionate about new technologies in IT industry</p>
+        <p class="lead">Software engineer, coder, entrepreneur, hiker</p>
       
     </div>
     <a class="sidebar-nav" href="https://www.kezic.net/">Home</a><br/>
@@ -79,7 +79,7 @@
 
     <div class="sidebar-footer">
       <p>Powered by <a href="http://gohugo.io/">Hugo</a> - 
-      &copy; 2019 Darko Kezic. All rights reserved.</p>
+      &copy; 2021 Darko Kezic. All rights reserved.</p>
     </div>
   </div>
 </div>
@@ -88,30 +88,17 @@
     <h1>How to send E-Mail from Go</h1>
     <time datetime=2019-04-21T10:21:19&#43;0200 class="post-date">Sun, Apr 21, 2019</time>
     <p>I wanted to create small service in Go, which should asynchronously send E-Mails created on web site.</p>
-
 <p>Web site is actually a reservation web page for hotel, where guests can directly book reservations, without going to some channel provider web site, like booking.com, hotels.com etc.</p>
-
 <p>At the end, when reservation is confirmed, user receives E-Mail with conformation. Currently E-Mail is send directly from server, in same thread, and guest must wait until E-Mail is received by SMTP server.</p>
-
 <p>I know this is not a good practice, and I wanted to change this. Lastly I am using Go for such cases, mostly because of single binary which ca be easily be installed as service on client site. For this, I also use <a href="https://nssm.cc/">nssm.exe</a> which allows any executable to be started as Windows service.</p>
-
 <h1 id="code-it-all-self-in-go-or-use-third-party-library">Code it all self in Go, or use third party library?</h1>
-
 <p>Every choice has it benefits. At first, I tried to send E-Mail using code examples from standard library. I had some success, but there are some issues when sending E-Mail over Gmail SMTP server on port 465. As it turns out, on port 567 is used <em>Submission for Simple Mail Transfer</em> (submission) and on port 465 is used <em>smtp protocol over TLS</em> (smtps).</p>
-
 <p>OK, it is not so simple, so I checked is there some third party solution for this on Github.</p>
-
 <p>I found on Github <a href="https://github.com/go-mail/mail">Gomail</a> project. This is fork of original Gomail project, and it is actively maintained.</p>
-
 <h1 id="how-to-install-gomail">How to install Gomail</h1>
-
 <p>As usual, use go get command:</p>
-
-<pre><code class="language-golang">go get -v gopkg.in/mail.v2
-</code></pre>
-
-<h1 id="example-how-to-use-it">Example how to use it</h1>
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-golang" data-lang="golang"><span style="color:#66d9ef">go</span> <span style="color:#a6e22e">get</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">v</span> <span style="color:#a6e22e">gopkg</span>.<span style="color:#a6e22e">in</span><span style="color:#f92672">/</span><span style="color:#a6e22e">mail</span>.<span style="color:#a6e22e">v2</span>
+</code></pre></div><h1 id="example-how-to-use-it">Example how to use it</h1>
 <p>Here is basic example, how we can use Gomail
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
 
@@ -173,12 +160,10 @@
     }
 
     <span style="color:#66d9ef">return</span>
-}</code></pre></div></p>
-
+}
+</code></pre></div></p>
 <p><code>panic</code> command is here used because this is simple example, but in production is better to return err to caller.</p>
-
 <h1 id="bottom-line">Bottom line</h1>
-
 <p>Until now Gomail is working without issues. I can only recommend it.
 So, give it a try!</p>
   </div>
